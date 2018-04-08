@@ -12,6 +12,11 @@
 			<one-to-many class="Student" />
 		</set>
 		
+		<set name="teachers" table="teachers_schoolClasses" cascade="all">
+			<key column="class_id" not-null="true" />
+			<many-to-many class="Teacher" column= "teacher_id" />
+		</set>
+		
 		<property name="profile" column="profile" type="string"></property>
 		<property name="currentYear" column="currentYear" type="integer"></property>
 		<property name="startYear" column="startYear" type="integer"></property>
