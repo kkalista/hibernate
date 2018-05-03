@@ -5,6 +5,10 @@ public class Student {
 	private String surname;
 	private String pesel;
 	private long class_id;
+	
+	public Student() {
+		
+	}
 
 	public long getId() {
 		return id;

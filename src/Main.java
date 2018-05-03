@@ -19,10 +19,10 @@ public class Main {
 	
 	public static void main(String[] args) {
 		Main main = new Main();
-		//main.addNewData();
+		// main.addNewData();
 		main.printSchools();
 		// main.executeQueries();
-		//main.updatingSchool();
+		// main.updatingSchool();
 		main.close();
 	}
 
