@@ -1,3 +1,4 @@
+import java.util.HashSet;
 import java.util.Set;
 
 @SuppressWarnings("serial")
@@ -6,9 +7,11 @@ public class School implements java.io.Serializable {
 	private long id;
 	private String name;
 	private String address;
+	
 	private Set<SchoolClass> classes;
 
 	public School() {
+		classes = new HashSet<SchoolClass>();
 	}
 
 	public long getId() {
@@ -43,6 +46,10 @@ public class School implements java.io.Serializable {
 		this.classes = classes;
 	}
 
+	public void addClass(SchoolClass newClass) {
+		classes.add(newClass);
+	}
+	
 	public String toString() {
 		return "School: " + getName() + " (" + getAddress() + ")";
 	}
